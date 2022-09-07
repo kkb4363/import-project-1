@@ -1,7 +1,7 @@
 const Next = () =>{
     return (
         <div>
-            <hi>this page is next page~</hi>
+            <hi style={{color:'white'}}>this page is next page~</hi>
         </div>
     )
 }

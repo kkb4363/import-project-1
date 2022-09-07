@@ -1,7 +1,7 @@
 const Prev = () => {
     return(
         <div>
-            <p>This page is Prev page</p>
+            <p style={{color:'white'}}>This page is Prev page</p>
         </div>
     )
 }
