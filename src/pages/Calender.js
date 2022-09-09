@@ -64,9 +64,15 @@ span{
     font-size:18px;
 }`;
 
-const RedCircleSpan = {position:'relative',zIndex:4};
+const RedText = styled.p`
+display:flex;
+margin-top:30px;
+margin-right:-20px;
+color:tomato;
+`;
+const RedCircleSpan = {position:'relative',zIndex:2};
 const RedCircle = styled.div`
-z-index:3;
+z-index:1;
 width:24px;
 height:24px;
 border-radius:12px;
@@ -74,6 +80,7 @@ background-color:tomato;
 position:absolute;
 margin-top:4px;
 display:flex;
+margin-right:3px;
 `;
 
 const Home = () => {
@@ -140,12 +147,25 @@ const Home = () => {
                         <Day><span>6</span></Day>
                         <Day><span>7</span></Day>
                         <Day><span>8</span></Day>
-                        <Day><span>9</span></Day>
-                        <Day style={SunSatur}><span>10</span></Day>
+                        <Day><span style={RedCircleSpan}>9</span>
+                        <RedCircle/>
+                        </Day>
+                        <Day style={SunSatur}>
+                        <RedText>추석</RedText>
+                        <span style={RedCircleSpan}>10</span>
+                        <RedCircle/>
+                        </Day>
                     </Week>
                     <Week>
-                        <Day style={SunSatur}><span>11</span></Day>
-                        <Day><span>12</span></Day>
+                        <Day style={SunSatur}><span 
+                        style={RedCircleSpan}>11</span>
+                        <RedCircle/>
+                        </Day>
+                        <Day>
+                            <RedText>대체 휴일</RedText>
+                            <span style={RedCircleSpan}>12</span>
+                        <RedCircle/>
+                        </Day>
                         <Day><span>13</span></Day>
                         <Day><span>14</span></Day>
                         <Day><span>15</span></Day>
@@ -153,7 +173,10 @@ const Home = () => {
                         <Day style={SunSatur}><span>17</span></Day>
                     </Week>
                     <Week>
-                        <Day style={SunSatur}><span>18</span></Day>
+                        <Day style={SunSatur}><span
+                        style={RedCircleSpan}>18</span>
+                        <RedCircle/>
+                        </Day>
                         <Day><span>19</span></Day>
                         <Day><span>20</span></Day>
                         <Day><span>21</span></Day>
@@ -162,7 +185,9 @@ const Home = () => {
                         <Day style={SunSatur}><span>24</span></Day>
                     </Week>
                     <Week>
-                        <Day style={SunSatur}><span>25</span></Day>
+                        <Day style={SunSatur}><span style={RedCircleSpan}>25</span>
+                        <RedCircle/>
+                        </Day>
                         <Day><span>26</span></Day>
                         <Day><span>27</span></Day>
                         <Day><span>28</span></Day>
