@@ -109,7 +109,7 @@ const August = () => {
                     fontSize:'16px'}}>2022년 8월
                 </h5>
 
-                <Link style={{marginLeft:'820px',marginRight:'8px'}} to='/August'>
+                <Link style={{marginLeft:'820px',marginRight:'8px'}} to='/July'>
                     <AiOutlineLeft style={Arrow}/>
                 </Link>
                 <h5 style={{

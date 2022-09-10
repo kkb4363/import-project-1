@@ -84,7 +84,7 @@ margin-top:5px;
 margin-right:6px;
 `
 
-const October = () => {
+const December = () => {
     return(
         <div>
             <Nav>
@@ -106,17 +106,17 @@ const October = () => {
             <Header>
                 <h5 style={{
                     color:'white',
-                    fontSize:'16px'}}>2022년 10월
+                    fontSize:'16px'}}>2022년 12월
                 </h5>
 
-                <Link style={{marginLeft:'811px',marginRight:'8px'}} to='/'>
+                <Link style={{marginLeft:'811px',marginRight:'8px'}} to='/November'>
                     <AiOutlineLeft style={Arrow}/>
                 </Link>
                 <h5 style={{
                     color:'white',
                     fontSize:'15px'}}> 오늘 
                 </h5>
-                <Link style={{marginLeft:'8px'}} to='/November'>
+                <Link style={{marginLeft:'8px'}} to='/December'>
                     <AiOutlineRight style={Arrow}/>
                 </Link>
             </Header>
@@ -131,74 +131,70 @@ const October = () => {
                     <span style={Graytext}>토</span>
                 </Yoil>
                     <Week>
-                        <Day style={Weekend}><span style={Graytext}>25</span></Day>
-                        <Day><span style={Graytext}>26</span></Day>
-                        <Day><span style={Graytext}>27</span></Day>
+                        <Day style={Weekend}><span style={Graytext}>27</span></Day>
                         <Day><span style={Graytext}>28</span></Day>
                         <Day><span style={Graytext}>29</span></Day>
                         <Day><span style={Graytext}>30</span></Day>
-                        <Day style={Weekend}><span>10월 1일</span></Day>
+                        <Day><span>12월 1일</span></Day>
+                        <Day><span>2</span></Day>
+                        <Day style={Weekend}><span>3</span></Day>
                     </Week>
                     <Week>
-                        <Day style={Weekend}>
-                            <span>2</span>
+                        <Day style={Weekend}><span>4</span>
                         </Day>
-                        <Day>
-                            <RedText>개천절</RedText>
-                            <RedDay/>
-                            <span>3</span>
-                        </Day>
-                        <Day><span>4</span></Day>
                         <Day><span>5</span></Day>
                         <Day><span>6</span></Day>
                         <Day><span>7</span></Day>
-                        <Day style={Weekend}><span>8</span></Day>
+                        <Day><span>8</span></Day>
+                        <Day>
+                            <span>9</span>
+                        </Day>
+                        <Day style={Weekend}>
+                        <span>10</span>
+                        </Day>
                     </Week>
                     <Week>
                         <Day style={Weekend}>
-                            <RedText>한글날</RedText>
-                            <RedDay/>
-                            <span>9</span>
+                            <span>11</span>
                         </Day>
                         <Day>
-                            <RedText>대체 휴일</RedText>
-                            <RedDay/>
-                            <span>10</span>
+                            <span>12</span>
                         </Day>
-                        <Day><span>11</span></Day>
-                        <Day><span>12</span></Day>
                         <Day><span>13</span></Day>
                         <Day><span>14</span></Day>
-                        <Day style={Weekend}><span>15</span></Day>
+                        <Day><span>15</span></Day>
+                        <Day><span>16</span></Day>
+                        <Day style={Weekend}>
+                            <span>17</span>
+                        </Day>
                     </Week>
                     <Week>
-                        <Day style={Weekend}><span>16</span></Day>
-                        <Day><span>17</span></Day>
-                        <Day><span>18</span></Day>
+                        <Day style={Weekend}>
+                            <span>18</span>
+                        </Day>
                         <Day><span>19</span></Day>
                         <Day><span>20</span></Day>
                         <Day><span>21</span></Day>
-                        <Day style={Weekend}><span>22</span></Day>
+                        <Day><span>22</span></Day>
+                        <Day><span>23</span></Day>
+                        <Day style={Weekend}>
+                            <span>24</span>
+                        </Day>
                     </Week>
                     <Week>
-                        <Day style={Weekend}><span>23</span></Day>
-                        <Day><span>24</span></Day>
-                        <Day><span>25</span></Day>
+                        <Day style={Weekend}>
+                            <RedText>성탄절</RedText>
+                            <RedDay/>
+                            <span>25</span>
+                        </Day>
                         <Day><span>26</span></Day>
                         <Day><span>27</span></Day>
                         <Day><span>28</span></Day>
-                        <Day style={Weekend}><span style={Graytext}>29</span></Day>
-                    </Week>
-                    <Week>
-                        <Day style={Weekend}><span>30</span></Day>
-                        <Day><span>31</span></Day>
-                        <Day><span style={Graytext}>11월 1일</span></Day>
-                        <Day><span style={Graytext}>2</span></Day>
-                        <Day><span style={Graytext}>3</span></Day>
-                        <Day><span style={Graytext}>4</span></Day>
-                        <Day style={Weekend}><span style={Graytext}>5</span></Day>
+                        <Day><span>29</span></Day>
+                        <Day><span>30</span></Day>
+                        <Day style={Weekend}><span>31</span></Day>
                     </Week>
             </main>
         </div>
         )}
-export default October;
+export default December;
