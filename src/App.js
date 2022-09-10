@@ -2,17 +2,18 @@ import {BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
-import Calender from "./pages/Calender";
-import Next from './pages/Next';
-import Prev from './pages/Prev';
+import Sebtember from "./pages/Sebtember";
+import October from './pages/October';
+import August from './pages/August';
+
 
 function App() {
   return (
     <BrowserRouter>
     <Routes>
-    <Route path="/" element={<Calender/>}/>
-    <Route path='/Next' element={<Next/>}/>
-    <Route path='/Prev' element={<Prev/>}/>
+    <Route path="/" element={<Sebtember/>}/>
+    <Route path='/October' element={<October/>}/>
+    <Route path='/August' element={<August/>}/>
     </Routes>
     </BrowserRouter>
   );
