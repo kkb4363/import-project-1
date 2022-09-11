@@ -2,6 +2,9 @@ import {Link} from 'react-router-dom';
 import {AiOutlineLeft,AiOutlineRight ,AiTwotoneCalendar} from "react-icons/ai";
 import styled from 'styled-components';
 import '../css/style.css';
+import { useEffect,useState } from 'react';
+import axios from 'axios';
+
 
 const Arrow = {color:'#696969',
             fontSize:'22px',
@@ -42,7 +45,12 @@ span{
     margin-top:5px;
     margin-right:10px;
     position:relative;
-}`;
+}
+h5{
+    position:absolute;
+    margin-top:100px;
+}
+`;
 const Hr = styled.div`
 display:flex;
 div:first-child{
@@ -82,9 +90,29 @@ border-radius:12.5px;
 background-color:tomato;
 margin-top:5px;
 margin-right:6px;
-`
+`;
 
 const January = () => {
+    const [data,setdata] = useState([]);
+    const loadData = (async ()=>{
+        try{
+            await axios
+            .get(`https://apis.data.go.kr/B090041/openapi/service/LrsrCldInfoService/getLunCalInfo?numOfRows=31&solYear=2022&solMonth=01&ServiceKey=ziROfCzWMmrKIseBzkXs58HpS39GI%2FmxjSEmUeZbKwYuyxnSc2kILXCBXlRpPZ8iam5cqwZqtw6db7CnWG%2FQQQ%3D%3D`,)
+            .then((res)=>{
+                const jsonRes = res.data.response.body.items.item;
+               
+                setdata(jsonRes[0]);
+                console.log(data);
+            });
+        } catch(error){
+            console.log(error);
+        }
+    })
+
+    useEffect(()=> {
+        loadData();
+    },[loadData]);
+
     return(
         <div>
             <Nav>
@@ -142,10 +170,15 @@ const January = () => {
                         <Day>
                             <span style={Graytext}>30</span></Day>
                         <Day><span style={Graytext}>31</span></Day>
-                        <Day style={Weekend}>
+                            <Day style={Weekend}>
                             <RedText>신정</RedText>
                             <RedDay/>
-                            <span>1</span></Day>
+                            <span>1</span>
+                            <h5>
+                                {data.lunMonth}월
+                                {data.lunDay}일 
+                            </h5>
+                            </Day>
                     </Week>
                     <Week>
                         <Day style={Weekend}>

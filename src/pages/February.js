@@ -2,6 +2,9 @@ import {Link} from 'react-router-dom';
 import {AiOutlineLeft,AiOutlineRight ,AiTwotoneCalendar} from "react-icons/ai";
 import styled from 'styled-components';
 import '../css/style.css';
+import { useEffect } from 'react';
+import axios from 'axios';
+
 
 const Arrow = {color:'#696969',
             fontSize:'22px',
@@ -85,6 +88,8 @@ margin-right:6px;
 `
 
 const February = () => {
+
+
     return(
         <div>
             <Nav>
