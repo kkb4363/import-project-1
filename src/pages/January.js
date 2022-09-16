@@ -93,31 +93,28 @@ margin-right:6px;
 `;
 
 const January = () => {
+    const [isLoading, setisLoading] = useState(true)
     const [data,setdata] = useState([]);
-    const loadData = (async ()=>{
-        try{
-            await axios
-            .get(`https://apis.data.go.kr/B090041/openapi/service/LrsrCldInfoService/getLunCalInfo?numOfRows=31&solYear=2022&solMonth=01&ServiceKey=ziROfCzWMmrKIseBzkXs58HpS39GI%2FmxjSEmUeZbKwYuyxnSc2kILXCBXlRpPZ8iam5cqwZqtw6db7CnWG%2FQQQ%3D%3D`,)
-            .then((res)=>{
-                const jsonRes = res.data.response.body.items.item;
-               
-                setdata(jsonRes[0]);
-                console.log(data);
-            });
-        } catch(error){
-            console.log(error);
-        }
-    })
+    
+    useEffect(()=>{
+        axios.get(`https://apis.data.go.kr/B090041/openapi/service/LrsrCldInfoService/getLunCalInfo?numOfRows=31&solYear=2022&solMonth=01&ServiceKey=ziROfCzWMmrKIseBzkXs58HpS39GI%2FmxjSEmUeZbKwYuyxnSc2kILXCBXlRpPZ8iam5cqwZqtw6db7CnWG%2FQQQ%3D%3D`)
+        .then((res) => {
+            setdata(res.data.response.body.items.item)
+            setisLoading(false)
+            console.log(data[0].lunDay)
+        })
+    },)
 
-    useEffect(()=> {
-        loadData();
-    },[loadData]);
+    if(isLoading){
+        return <h2>Loading...</h2>
+    }
+
 
     return(
         <div>
             <Nav>
-                <span><AiTwotoneCalendar/> 캘린더  보기</span>
-            </Nav>
+                <span><AiTwotoneCalendar/> 캘린더  보기</span> 
+            </Nav> 
             
             <Hr>
             <div></div>
@@ -160,7 +157,8 @@ const January = () => {
                 </Yoil>
                     <Week>
                         <Day style={Weekend}>
-                            <span style={Graytext}>26</span></Day>
+                            <span style={Graytext}>26</span>
+                        </Day>
                         <Day><span style={Graytext}>27</span></Day>
                         <Day>
                             <span style={Graytext}>28</span></Day>
@@ -174,18 +172,18 @@ const January = () => {
                             <RedText>신정</RedText>
                             <RedDay/>
                             <span>1</span>
-                            <h5>
-                                {data.lunMonth}월
-                                {data.lunDay}일 
-                            </h5>
+                            <h5>{data[0].lunDay}</h5>
                             </Day>
                     </Week>
                     <Week>
                         <Day style={Weekend}>
                             <span>2</span>
+                            <h5>{data[1].lunDay}</h5>
                         </Day>
                         <Day>
-                            <span>3</span></Day>
+                            <span>3</span>
+                            <h5>{data[2].lunDay}</h5>    
+                        </Day>
                         <Day><span>4</span></Day>
                         <Day>
                             <span>5</span></Day>
