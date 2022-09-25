@@ -2,6 +2,10 @@ import {Link} from 'react-router-dom';
 import {AiOutlineLeft,AiOutlineRight ,AiTwotoneCalendar} from "react-icons/ai";
 import styled from 'styled-components';
 import '../css/style.css';
+import { useEffect , useState} from 'react';
+import axios from 'axios';
+
+const ServiceKey = `ziROfCzWMmrKIseBzkXs58HpS39GI/mxjSEmUeZbKwYuyxnSc2kILXCBXlRpPZ8iam5cqwZqtw6db7CnWG/QQQ==`;
 
 const Arrow = {color:'#696969',
             fontSize:'22px',
@@ -42,6 +46,11 @@ span{
     margin-top:5px;
     margin-right:10px;
     position:relative;
+}
+h5{
+    position:absolute;
+    margin-top:100px;
+    opacity:0.5;
 }`;
 const Hr = styled.div`
 display:flex;
@@ -85,6 +94,10 @@ margin-right:6px;
 `
 
 const March = () => {
+
+   
+
+    
     return(
         <div>
             <Nav>
@@ -132,19 +145,28 @@ const March = () => {
                 </Yoil>
                     <Week>
                         <Day style={Weekend}>
-                            <span style={Graytext}>27</span></Day>
-                        <Day><span style={Graytext}>28</span></Day>
+                            <span style={Graytext}>27</span>
+                        </Day>
+                        <Day>
+                            <span style={Graytext}>28</span>
+                        </Day>
                         <Day>
                             <RedText>삼일절</RedText>
                             <RedDay/>
-                            <span>1</span></Day>
+                            <span>1</span>
+                        </Day>
                         <Day>
                             <span>2</span>
                         </Day>
                         <Day>
-                            <span>3</span></Day>
-                        <Day><span>4</span></Day>
-                        <Day style={Weekend}><span>5</span></Day>
+                            <span>3</span>
+                        </Day>
+                        <Day>
+                            <span>4</span>
+                        </Day>
+                        <Day style={Weekend}>
+                            <span>5</span>
+                        </Day>
                     </Week>
                     <Week>
                         <Day style={Weekend}>

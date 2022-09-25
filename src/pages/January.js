@@ -93,31 +93,37 @@ margin-top:5px;
 margin-right:6px;
 `;
 
+
 const January = () => {
     const [isLoading, setisLoading] = useState(true)
     const [data,setdata] = useState([]);
     const [holiday,setholiday] = useState([]);
 
+    {/* 양,음력 api 받아오기 */}
     useEffect(()=>{
-        axios.get(`https://apis.data.go.kr/B090041/openapi/service/LrsrCldInfoService/getLunCalInfo?numOfRows=31&solYear=2022&solMonth=01&ServiceKey=ziROfCzWMmrKIseBzkXs58HpS39GI%2FmxjSEmUeZbKwYuyxnSc2kILXCBXlRpPZ8iam5cqwZqtw6db7CnWG%2FQQQ%3D%3D`)
+        axios.get(`https://apis.data.go.kr/B090041/openapi/service/LrsrCldInfoService/getLunCalInfo?numOfRows=31&solYear=2022&solMonth=01&ServiceKey=ziROfCzWMmrKIseBzkXs58HpS39GI/mxjSEmUeZbKwYuyxnSc2kILXCBXlRpPZ8iam5cqwZqtw6db7CnWG/QQQ==`)
         .then((res) => {
             setdata(res.data.response.body.items.item);
-            setisLoading(false);
         })
     },)
-
+    
+    {/* 특일 api 받아오기 */}
     useEffect(()=>{
         axios.get(`https://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getHoliDeInfo?solYear=2022&solMonth=01&ServiceKey=ziROfCzWMmrKIseBzkXs58HpS39GI%2FmxjSEmUeZbKwYuyxnSc2kILXCBXlRpPZ8iam5cqwZqtw6db7CnWG%2FQQQ%3D%3D`)
         .then((res)=>{
             setholiday(res.data.response.body.items.item);
             console.log(holiday);
+            setisLoading(false);
         })
-    })
+    },)
     
-
-    if(isLoading){
-        return <h1 style={{color:'white'}}>Loading...</h1>
+     {/* api 받아오는 동안 Loading 출력 */}
+     if(isLoading){
+        return <h1 style={{color:'white'}}>
+        <div>로딩중입니다 잠시만 기다려주세요.</div>
+        </h1>
     }
+    
 
 
     return(
