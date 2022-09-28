@@ -176,132 +176,132 @@ const February = () => {
                             <span style={Graytext}>30</span></Day>
                         <Day><span style={Graytext}>31</span></Day>
                         <Day>
-                            <RedText>{holiday[0].dateName}</RedText>
+                            <RedText>{holiday[0]?.dateName}</RedText>
                             <RedDay/>
-                            <span>{data[0].solDay}</span>
-                            <h5>{data[0].lunMonth}월{data[0].lunDay}일</h5>
+                            <span>{data[0]?.solDay}</span>
+                            <h5>{data[0]?.lunMonth}월{data[0]?.lunDay}일</h5>
                         </Day>
                         <Day>
-                        <RedText>{holiday[1].dateName}</RedText>
+                        <RedText>{holiday[1]?.dateName}</RedText>
                             <RedDay/>
-                            <span>{data[1].solDay}</span>
-                            <h5>{data[1].lunMonth}월{data[1].lunDay}일</h5>
+                            <span>{data[1]?.solDay}</span>
+                            <h5>{data[1]?.lunMonth}월{data[1]?.lunDay}일</h5>
                         </Day>
                         <Day>
-                        <span>{data[2].solDay}</span>
-                            <h5>{data[2].lunMonth}월{data[2].lunDay}일</h5>
+                        <span>{data[2]?.solDay}</span>
+                            <h5>{data[2]?.lunMonth}월{data[2]?.lunDay}일</h5>
                         </Day>
                         <Day>
-                        <span>{data[3].solDay}</span>
-                            <h5>{data[3].lunMonth}월{data[3].lunDay}일</h5>
+                        <span>{data[3]?.solDay}</span>
+                            <h5>{data[3]?.lunMonth}월{data[3]?.lunDay}일</h5>
                         </Day>
                         <Day style={Weekend}>
-                        <span>{data[4].solDay}</span>
-                            <h5>{data[4].lunMonth}월{data[4].lunDay}일</h5>
+                        <span>{data[4]?.solDay}</span>
+                            <h5>{data[4]?.lunMonth}월{data[4]?.lunDay}일</h5>
                         </Day>
                     </Week> 
                     
                     <Week> {/* 두번째 주 */}
                         <Day style={Weekend}>
-                            <span>{data[5].solDay}</span>
-                            <h5>{data[5].lunMonth}월{data[5].lunDay}</h5>                        
+                            <span>{data[5]?.solDay}</span>
+                            <h5>{data[5]?.lunMonth}월{data[5]?.lunDay}</h5>                        
                         </Day>
                         <Day>
-                            <span>{data[6].solDay}</span>
-                            <h5>{data[6].lunMonth}월{data[6].lunDay}일</h5>
+                            <span>{data[6]?.solDay}</span>
+                            <h5>{data[6]?.lunMonth}월{data[6]?.lunDay}일</h5>
                         </Day>
                         <Day>
-                            <span>{data[7].solDay}</span>
-                            <h5>{data[7].lunMonth}월{data[7].lunDay}일</h5>
+                            <span>{data[7]?.solDay}</span>
+                            <h5>{data[7]?.lunMonth}월{data[7]?.lunDay}일</h5>
                         </Day>
                         <Day>
-                            <span>{data[8].solDay}</span>
-                            <h5>{data[8].lunMonth}월{data[8].lunDay}일</h5>
+                            <span>{data[8]?.solDay}</span>
+                            <h5>{data[8]?.lunMonth}월{data[8]?.lunDay}일</h5>
                         </Day>
                         <Day>
-                            <span>{data[9].solDay}</span>
-                            <h5>{data[9].lunMonth}월{data[9].lunDay}일</h5>
+                            <span>{data[9]?.solDay}</span>
+                            <h5>{data[9]?.lunMonth}월{data[9]?.lunDay}일</h5>
                         </Day>
                         <Day>
-                            <span>{data[10].solDay}</span>
-                            <h5>{data[10].lunMonth}월{data[10].lunDay}일</h5>
+                            <span>{data[10]?.solDay}</span>
+                            <h5>{data[10]?.lunMonth}월{data[10]?.lunDay}일</h5>
                         </Day>
                         <Day style={Weekend}>
-                            <span>{data[11].solDay}</span>
-                            <h5>{data[11].lunMonth}월{data[11].lunDay}일</h5>
+                            <span>{data[11]?.solDay}</span>
+                            <h5>{data[11]?.lunMonth}월{data[11]?.lunDay}일</h5>
                         </Day>
                     </Week>
 
                     <Week> {/* 세번째 주 */}
                         <Day style={Weekend}>
-                            <span>{data[12].solDay}</span>
-                            <h5>{data[12].lunMonth}월{data[12].lunDay}일</h5>
+                            <span>{data[12]?.solDay}</span>
+                            <h5>{data[12]?.lunMonth}월{data[12]?.lunDay}일</h5>
                         </Day>
                         <Day>
-                            <span>{data[13].solDay}</span>
-                            <h5>{data[13].lunMonth}월{data[13].lunDay}일</h5>                 
+                            <span>{data[13]?.solDay}</span>
+                            <h5>{data[13]?.lunMonth}월{data[13]?.lunDay}일</h5>                 
                         </Day>
                         <Day>
-                            <span>{data[14].solDay}</span>
-                            <h5>{data[14].lunMonth}월{data[14].lunDay}일</h5>
+                            <span>{data[14]?.solDay}</span>
+                            <h5>{data[14]?.lunMonth}월{data[14]?.lunDay}일</h5>
                         </Day>
                         <Day>
-                            <span>{data[15].solDay}</span>
-                            <h5>{data[15].lunMonth}월{data[15].lunDay}일</h5>
+                            <span>{data[15]?.solDay}</span>
+                            <h5>{data[15]?.lunMonth}월{data[15]?.lunDay}일</h5>
                         </Day>
                         <Day>
-                            <span>{data[16].solDay}</span>
-                            <h5>{data[16].lunMonth}월{data[16].lunDay}일</h5>
+                            <span>{data[16]?.solDay}</span>
+                            <h5>{data[16]?.lunMonth}월{data[16]?.lunDay}일</h5>
                         </Day>
                         <Day>
-                            <span>{data[17].solDay}</span>
-                            <h5>{data[17].lunMonth}월{data[17].lunDay}일</h5>
+                            <span>{data[17]?.solDay}</span>
+                            <h5>{data[17]?.lunMonth}월{data[17]?.lunDay}일</h5>
                         </Day>
                         <Day style={Weekend}>
-                            <span>{data[18].solDay}</span>
-                            <h5>{data[18].lunMonth}월{data[18].lunDay}일</h5>
+                            <span>{data[18]?.solDay}</span>
+                            <h5>{data[18]?.lunMonth}월{data[18]?.lunDay}일</h5>
                         </Day>
                     </Week>
 
                     <Week> {/* 네번째 주 */}
                         <Day style={Weekend}>
-                            <span>{data[19].solDay}</span>
-                            <h5>{data[19].lunMonth}월{data[19].lunDay}일</h5>                    
+                            <span>{data[19]?.solDay}</span>
+                            <h5>{data[19]?.lunMonth}월{data[19]?.lunDay}일</h5>                    
                         </Day>
                         <Day>
-                            <span>{data[20].solDay}</span>
-                            <h5>{data[20].lunMonth}월{data[20].lunDay}일</h5>                        
+                            <span>{data[20]?.solDay}</span>
+                            <h5>{data[20]?.lunMonth}월{data[20]?.lunDay}일</h5>                        
                         </Day>
                         <Day>
-                            <span>{data[21].solDay}</span>
-                            <h5>{data[21].lunMonth}월{data[21].lunDay}일</h5>                        
+                            <span>{data[21]?.solDay}</span>
+                            <h5>{data[21]?.lunMonth}월{data[21]?.lunDay}일</h5>                        
                         </Day>
                         <Day>
-                            <span>{data[22].solDay}</span>
-                            <h5>{data[22].lunMonth}월{data[22].lunDay}일</h5>                        
+                            <span>{data[22]?.solDay}</span>
+                            <h5>{data[22]?.lunMonth}월{data[22]?.lunDay}일</h5>                        
                         </Day>
                         <Day>
-                            <span>{data[23].solDay}</span>
-                            <h5>{data[23].lunMonth}월{data[23].lunDay}일</h5>                        
+                            <span>{data[23]?.solDay}</span>
+                            <h5>{data[23]?.lunMonth}월{data[23]?.lunDay}일</h5>                        
                         </Day>
                         <Day>
-                            <span>{data[24].solDay}</span>
-                            <h5>{data[24].lunMonth}월{data[24].lunDay}일</h5>                        
+                            <span>{data[24]?.solDay}</span>
+                            <h5>{data[24]?.lunMonth}월{data[24]?.lunDay}일</h5>                        
                         </Day>
                         <Day style={Weekend}>
-                            <span>{data[25].solDay}</span>
-                            <h5>{data[25].lunMonth}월{data[25].lunDay}일</h5>                        
+                            <span>{data[25]?.solDay}</span>
+                            <h5>{data[25]?.lunMonth}월{data[25]?.lunDay}일</h5>                        
                         </Day>
                     </Week>
 
                     <Week> {/* 다섯번째 주 */}
                         <Day style={Weekend}>
-                            <span>{data[26].solDay}</span>
-                            <h5>{data[26].lunMonth}월{data[26].lunDay}일</h5>                        
+                            <span>{data[26]?.solDay}</span>
+                            <h5>{data[26]?.lunMonth}월{data[26]?.lunDay}일</h5>                        
                         </Day>
                         <Day>
-                            <span>{data[27].solDay}</span>
-                            <h5>{data[27].lunMonth}월{data[27].lunDay}일</h5>                        
+                            <span>{data[27]?.solDay}</span>
+                            <h5>{data[27]?.lunMonth}월{data[27]?.lunDay}일</h5>                        
                         </Day>
                         <Day>
                             <span style={Graytext}>3월 1일</span>
