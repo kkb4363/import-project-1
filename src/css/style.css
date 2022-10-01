@@ -2,44 +2,4 @@ body{
     background-color:rgba(0,0,0,0.9);
 }
 
-table {
-    width: 70%;
-    table-layout: fixed;
-    word-break: break-all;
-    color: gray;
-    border-collapse: collapse;
-    margin-left: 10px;
-  }
-  
-  th {
-    padding: 10px;
-  }
-  
-  td {
-    height: 30px;
-    overflow: hidden;
-    color: white;
-    font-weight: bold;
-    border: 1px solid gray;
-    vertical-align: top;
-    text-align: right;
-    padding: 5px 10px 5em 0;
-  }
-  
-  td div {
-    padding-top: 5px;
-    overflow: visible;
-  }
-  
-  tr:first-child {
-    color: white;
-  }
-  
-  td:first-child, td:last-child {
-    background: #2b2b2b;
-  }
-  
-  
-  .res {
-    color: red;
-  }
+
